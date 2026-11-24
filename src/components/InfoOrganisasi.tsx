@@ -402,7 +402,7 @@ export default function InfoOrganisasi() {
                 Open Recruitment 2025 dibuka! Bergabunglah dengan komunitas peneliti muda terbaik dan wujudkan ide mu jadi proyek nyata.
               </p>
               <a
-                href="/daftar"
+                href="/login"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base bg-white text-indigo-600 hover:bg-indigo-50 transition-all shadow-lg hover:scale-[1.02]"
               >
                 Daftar Sekarang

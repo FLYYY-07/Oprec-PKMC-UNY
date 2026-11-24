@@ -7,12 +7,11 @@ import { useState, useEffect } from 'react'
 
 const footerLinks = {
   program: [
-    { label: 'Research & Development', href: '#divisions' },
-    { label: 'Education & Training', href: '#divisions' },
-    { label: 'Community Engagement', href: '#divisions' },
-    { label: 'Creative & Media', href: '#divisions' },
-    { label: 'Partnership & Sponsorship', href: '#divisions' },
-    { label: 'Operations & Logistics', href: '#divisions' },
+    { label: 'Tim System', href: '#divisions' },
+    { label: 'Data', href: '#divisions' },
+    { label: 'Design', href: '#divisions' },
+    { label: 'Public Relation', href: '#divisions' },
+    { label: 'Pengurus Inti', href: '#divisions' },
   ],
   resources: [
     { label: 'Template Proposal', href: '#' },

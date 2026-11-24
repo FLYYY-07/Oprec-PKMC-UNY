@@ -8,6 +8,7 @@ import { clsx } from 'clsx'
 const navItems = [
   { href: '#features', label: 'Program' },
   { href: '#about', label: 'Tentang Kami' },
+  { href: '#pengurus', label: 'Pengurus' },
   { href: '#divisions', label: 'Divisi' },
   { href: '/login', label: 'Daftar', primary: true },
 ]
@@ -40,7 +41,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <div className="hidden md:flex md:items-center md:gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}

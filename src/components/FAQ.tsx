@@ -54,7 +54,7 @@ const faqData = {
     },
     {
       q: 'Apa syarat pendaftaran minimal?',
-      a: '(1) Mahasiswa aktif UNY semester 1-6, (2) Memiliki NIM & email mahasiswa (@student.univ.ac.id) valid, (3) Bersedia aktif minimal 1 semester (2 semester lebih diutamakan), (4) Komitmen hadir di kegiatan rutin divisi & organisasi, (5) Mengisi form pendaftaran lengkap termasuk motivasi min. 100 karakter.',
+      a: '(1) Mahasiswa aktif UNY semester 1-6, (2) Memiliki NIM & email mahasiswa (@student.uny.ac.id) valid, (3) Bersedia aktif minimal 1 semester (2 semester lebih diutamakan), (4) Komitmen hadir di kegiatan rutin divisi & organisasi, (5) Mengisi form pendaftaran lengkap termasuk motivasi min. 100 karakter.',
     },
     {
       q: 'Apakah boleh mendaftar ke lebih dari 1 divisi?',
@@ -293,7 +293,7 @@ export default function FAQ() {
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/daftar"
+              href="/login"
               className="px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/25 hover:scale-[1.02]"
             >
               Daftar Sekarang

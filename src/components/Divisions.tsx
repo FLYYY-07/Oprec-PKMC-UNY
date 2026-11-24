@@ -1,133 +1,106 @@
 'use client'
 
-import { 
-  FlaskConical, 
-  GraduationCap, 
-  Users, 
-  Palette, 
-  Handshake, 
-  Cog,
-  Search,
-  BookOpen,
+import {
+  Cpu,
+  Database,
+  Palette,
   Megaphone,
-  Camera,
-  Briefcase,
-  ClipboardList,
-  Package,
+  Shield,
+  Search,
   CheckCircle,
 } from 'lucide-react'
 import { clsx } from 'clsx'
 
 const divisions = [
   {
-    id: 'research-development',
-    name: 'Research & Development',
-    short: 'R&D',
-    icon: FlaskConical,
+    id: 'tim-system',
+    name: 'Tim System',
+    short: 'System',
+    icon: Cpu,
     color: 'from-blue-500 to-indigo-600',
     bg: 'bg-blue-50 text-blue-600',
-    description: 'Jantung riset PKM Center. Mengelola ide → proposal → eksekusi riset terapan & publikasi.',
+    description: 'Mengembangkan dan memelihara sistem informasi, website, serta infrastruktur digital PKM Center UNY.',
     responsibilities: [
-      'Pendampingan penulisan proposal PKM-P, PKM-RSH, PKM-KC',
-      'Metodologi penelitian & analisis data',
-      'Koordinasi review proposal internal',
-      'Publikasi jurnal & konferensi',
+      'Pengembangan & pemeliharaan website dan portal PKM Center',
+      'Automasi alur pendaftaran, pendataan, dan sistem internal',
+      'Integrasi API, keamanan sistem, dan manajemen server',
+      'Dukungan teknis untuk seluruh kegiatan digital organisasi',
     ],
-    skills: ['Critical Thinking', 'Academic Writing', 'Statistics', 'R/Python', 'LaTeX'],
-    projects: ['PKM-P: Sistem Deteksi Penyakit Tanaman', 'PKM-RSH: Analisis Sentimen Media Sosial'],
-    lookingFor: 'Mahasiswa yang suka membaca paper, punya rasa ingin tahu tinggi, & tidak takut data.',
+    skills: ['Web Development', 'Next.js / React', 'Backend & API', 'Git', 'Problem Solving'],
+    projects: ['Portal Open Recruitment PKM Center UNY', 'Sistem Manajemen Proposal Internal'],
+    lookingFor: 'Mahasiswa yang gemar membangun sistem digital, teliti dalam kode, dan siap memecahkan masalah teknis.',
   },
   {
-    id: 'education-training',
-    name: 'Education & Training',
-    short: 'EduTrain',
-    icon: GraduationCap,
+    id: 'data',
+    name: 'Data',
+    short: 'Data',
+    icon: Database,
     color: 'from-emerald-500 to-teal-600',
     bg: 'bg-emerald-50 text-emerald-600',
-    description: 'Mendesain & menjalankan program pembelajaran: bootcamp, workshop, sharing session, mentoring.',
+    description: 'Mengelola database pendaftar, analisis statistik proposal PKM, dan pelaporan berbasis data organisasi.',
     responsibilities: [
-      'Kurikulum Research Methodology Bootcamp',
-      'Workshop tools: Git, LaTeX, Overleaf, Canva, Figma',
-      'Peer mentoring & study group',
-      'Manajemen LMS & materi pembelajaran',
+      'Pengelolaan basis data anggota, mentor, dan tim PKM UNY',
+      'Pengolahan, pembersihan, dan visualisasi data capaian PKM',
+      'Analisis tren pendanaan & kelolosan PIMNAS per tahun',
+      'Penyusunan laporan evaluasi berbasis data untuk pengurus',
     ],
-    skills: ['Instructional Design', 'Public Speaking', 'Facilitation', 'LMS (Moodle/Canvas)', 'Content Creation'],
-    projects: ['Bootcamp Batch 1-5 (200+ alumni)', 'Workshop Series: "Dari Nol ke Paper"'],
-    lookingFor: 'Yang suka mengajar, sharing knowledge, & punya kemampuan presentasi yang baik.',
+    skills: ['Excel / Spreadsheet', 'Data Analysis', 'SQL / Python', 'Visualisasi Data', 'Teliti'],
+    projects: ['Dashboard Monitoring Proposal PKM UNY', 'Analisis Tren Lolos PIMNAS 5 Tahun Terakhir'],
+    lookingFor: 'Mahasiswa yang rapi, kritis terhadap angka, dan suka mengolah data menjadi insight yang bermanfaat.',
   },
   {
-    id: 'community-engagement',
-    name: 'Community Engagement',
-    short: 'ComEng',
-    icon: Users,
-    color: 'from-amber-500 to-orange-600',
-    bg: 'bg-amber-50 text-amber-600',
-    description: 'Menghubungkan kampus dengan masyarakat nyata melalui PKM-M, KKN, & proyek berbasis desa.',
-    responsibilities: [
-      'Survey lokasi & needs assessment masyarakat',
-      'Perencanaan & eksekusi PKM-PM / KKN',
-      'Koordinasi dengan pihak desa / stakeholder',
-      'Monitoring & evaluasi dampak sosial',
-    ],
-    skills: ['Community Mapping', 'Project Management', 'Stakeholder Communication', 'Report Writing', 'Empati'],
-    projects: ['PKM-PM: Digitalisasi UMKM Desa X', 'KKN Tematik: Literasi Digital Lansia'],
-    lookingFor: 'Punya kepekaan sosial, suka turun lapangan, & bisa berkomunikasi lintas budaya.',
-  },
-  {
-    id: 'creative-media',
-    name: 'Creative & Media',
-    short: 'CreMedia',
+    id: 'design',
+    name: 'Design',
+    short: 'Design',
     icon: Palette,
     color: 'from-purple-500 to-pink-600',
     bg: 'bg-purple-50 text-purple-600',
-    description: 'Visualisasi ide riset jadi konten menarik: poster, video, website, branding, dokumentasi.',
+    description: 'Merancang identitas visual, konten kreatif, poster, infografis, dan dokumentasi media PKM Center UNY.',
     responsibilities: [
-      'Desain poster ilmiah & infografis riset',
-      'Video dokumentasi & promosi kegiatan',
-      'Manajemen sosial media (IG, LinkedIn, TikTok)',
-      'Branding & merchandise organisasi',
-      'Website & portfolio digital',
+      'Desain poster, feeds, infografis, dan materi publikasi PKM',
+      'Menjaga konsistensi branding visual PKM Center UNY',
+      'Produksi & editing video dokumentasi serta promosi acara',
+      'Kolaborasi konten kreatif bersama Public Relation',
     ],
-    skills: ['Figma/Canva', 'Video Editing (CapCut/Premiere)', 'Motion Graphics', 'Copywriting', 'Social Media Strategy'],
-    projects: ['Rebranding PKM Center 2024', 'Video Profil Tim Juara PIMNAS'],
-    lookingFor: 'Kreatif, punya portfolio desain/video, & paham tren konten edukatif.',
+    skills: ['Figma / Canva', 'Adobe Illustrator / Photoshop', 'Video Editing', 'Visual Branding', 'Kreativitas'],
+    projects: ['Rebranding Visual PKM Center UNY', 'Kit Publikasi Road to PIMNAS'],
+    lookingFor: 'Mahasiswa yang kreatif, peka terhadap estetika visual, dan senang bercerita lewat karya desain.',
   },
   {
-    id: 'partnership-sponsorship',
-    name: 'Partnership & Sponsorship',
-    short: 'PartSpons',
-    icon: Handshake,
-    color: 'from-indigo-500 to-purple-600',
+    id: 'public-relation',
+    name: 'Public Relation',
+    short: 'PR',
+    icon: Megaphone,
+    color: 'from-amber-500 to-orange-600',
+    bg: 'bg-amber-50 text-amber-600',
+    description: 'Menjadi wajah komunikasi PKM Center UNY dengan mahasiswa, fakultas, mitra eksternal, dan media sosial.',
+    responsibilities: [
+      'Manajemen komunikasi media sosial dan copywriting publikasi',
+      'Membangun relasi dengan ormawa, dosen pembimbing, dan mitra',
+      'Menjadi narahubung resmi & MC/moderator kegiatan PKM Center',
+      'Strategi kampanye dan promosi program kerja organisasi',
+    ],
+    skills: ['Public Speaking', 'Copywriting', 'Social Media Strategy', 'Networking', 'Komunikasi'],
+    projects: ['Kampanye Sosialisasi PKM Tingkat Universitas', 'Kemitraan Media & Komunitas Riset'],
+    lookingFor: 'Mahasiswa yang komunikatif, percaya diri, ramah, dan mampu membangun jejaring secara profesional.',
+  },
+  {
+    id: 'pengurus-inti',
+    name: 'Pengurus Inti',
+    short: 'Inti',
+    icon: Shield,
+    color: 'from-indigo-600 to-violet-700',
     bg: 'bg-indigo-50 text-indigo-600',
-    description: 'Membangun relasi dengan industri, alumni, LPPM, & sponsor untuk mendanai proyek anggota.',
+    description: 'Mengkoordinasikan arah strategis, administrasi kesekretariatan, keuangan, dan sinergi seluruh divisi.',
     responsibilities: [
-      'Proposal sponsorship & grant writing',
-      'Negosiasi MoU dengan mitra eksternal',
-      'Acara networking & career talk',
-      'Manajemen database alumni & mitra',
+      'Perencanaan strategis & pengawasan program kerja tahunan',
+      'Pengelolaan administrasi surat-menyurat dan arsip resmi',
+      'Manajemen keuangan, anggaran, dan laporan pertanggungjawaban',
+      'Koordinasi lintas divisi serta evaluasi kinerja organisasi',
     ],
-    skills: ['Business Communication', 'Proposal Writing', 'Negotiation', 'Networking', 'CRM Management'],
-    projects: ['Hibah Industri Rp500jt untuk PKM-P', 'MoU dengan 10+ Startup & Komunitas'],
-    lookingFor: 'Komunikatif, percaya diri, punya jaringan, & suka "menjual" ide ke pihak eksternal.',
-  },
-  {
-    id: 'operations-logistics',
-    name: 'Operations & Logistics',
-    short: 'OpsLog',
-    icon: Cog,
-    color: 'from-slate-500 to-slate-700',
-    bg: 'bg-slate-50 text-slate-600',
-    description: 'Tulang punggung organisasi: administrasi, keuangan, acara, dokumentasi, & infrastruktur.',
-    responsibilities: [
-      'Administrasi & arsip dokumen resmi',
-      'Manajemen keuangan & laporan pertanggungjawaban',
-      'Event management (rapat, acara besar, retreat)',
-      'Infrastruktur: Drive, Notion, Discord, Zoom',
-      'Rekrutmen & onboarding anggota baru',
-    ],
-    skills: ['Admin & Filing', 'Financial Literacy', 'Event Planning', 'Notion/Drive', 'Detail-Oriented'],
-    projects: ['Sistem Arsip Digital Terintegrasi', 'Manajemen Anggaran Tahunan Rp100jt+'],
-    lookingFor: 'Rapi, teliti, suka sistem & prosedur, & jadi "problem solver" di balik layar.',
+    skills: ['Leadership', 'Manajemen Organisasi', 'Administrasi', 'Pengelolaan Keuangan', 'Pengambilan Keputusan'],
+    projects: ['Rapat Kerja & Evaluasi Program PKM Center', 'Tata Kelola Administrasi & Pendanaan Organisasi'],
+    lookingFor: 'Mahasiswa yang visioner, bertanggung jawab, terorganisir, dan siap memimpin sinergi lintas divisi.',
   },
 ]
 
@@ -138,14 +111,13 @@ export default function Divisions() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium mb-4">
-            6 Divisi Unggulan
+            5 Divisi Resmi PKM Center UNY
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
             Temukan <span className="text-indigo-600">Peranmu</span> di Tim
           </h2>
           <p className="text-lg text-slate-600">
-            Setiap divisi punya fokus unik tapi saling terhubung. Pilih yang cocok bakatmu,
-            atau daftar sebagai <span className="font-medium text-indigo-600">Generalist</span> untuk rotasi.
+            Pilih 1 divisi yang paling sesuai dengan minat dan kontribusi terbaikmu di PKM Center UNY.
           </p>
         </div>
 
@@ -166,7 +138,7 @@ export default function Divisions() {
                 <div className={clsx('flex h-12 w-12 items-center justify-center rounded-xl', div.bg)}>
                   <div.icon className="h-6 w-6" aria-hidden="true" />
                 </div>
-                <span className="text-xs font-bold px-2 py-1 rounded-full bg-gradient-to-r text-white" style={{ background: div.color }}>
+                <span className={clsx('text-xs font-bold px-2.5 py-1 rounded-full bg-gradient-to-r text-white', div.color)}>
                   {div.short}
                 </span>
               </div>
@@ -218,7 +190,7 @@ export default function Divisions() {
                       ))}
                     </ul>
                   </div>
-                  <div className="p-3 rounded-lg bg-gradient-to-r text-white/90" style={{ background: div.color }}>
+                  <div className={clsx('p-3 rounded-lg bg-gradient-to-r text-white/95', div.color)}>
                     <p className="font-medium mb-1">Kami butuh kamu yang:</p>
                     <p className="text-sm">{div.lookingFor}</p>
                   </div>
@@ -230,8 +202,7 @@ export default function Divisions() {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <p className="text-slate-600 mb-4">Masih bingung divisi mana yang cocok?</p>
-          <p className="text-slate-500 mb-6">Pilih <span className="font-medium text-indigo-600">"Generalist"</span> di form pendaftaran — kami akan bantu tempatkan kamu setelah wawancara.</p>
+          <p className="text-slate-600 mb-6">Siap berkontribusi dan berkembang bersama PKM Center UNY?</p>
           <a href="/login" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg shadow-indigo-500/25">
             Daftar Sekarang →
           </a>

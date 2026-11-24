@@ -15,6 +15,7 @@ export interface RegistrationData {
   email: string
   phone: string
   student_id: string
+  faculty?: string
   major: string
   batch: string
   motivation: string
@@ -24,7 +25,29 @@ export interface RegistrationData {
   instagram: string
   linkedin?: string
   portfolio?: string
+  cv_url?: string
+  portfolio_url?: string
   created_at?: string
+}
+
+// Upload file to Supabase Storage
+export async function uploadFile(
+  bucket: string,
+  path: string,
+  file: File,
+  contentType: string
+): Promise<{ url: string | null; error: Error | null }> {
+  const { data, error } = await supabase.storage
+    .from(bucket)
+    .upload(path, file, {
+      contentType,
+      upsert: false,
+    })
+
+  if (error) return { url: null, error }
+
+  const { data: urlData } = supabase.storage.from(bucket).getPublicUrl(path)
+  return { url: urlData.publicUrl, error: null }
 }
 
 // Fungsi helper untuk insert pendaftaran
